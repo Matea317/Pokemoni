@@ -1,0 +1,27 @@
+<h2 mat-dialog-title class="dialog-hed-style"> Detalji za {{data.name | titlecase}}</h2>
+<mat-dialog-content>
+  <mat-grid-list cols="4">
+    <mat-grid-tile class="main-grid-style">
+      <ul>
+        <li>Type: {{types | slice: 0:-2}}</li>
+        <li>Weight: {{weight}}</li>
+        <li>Height: {{height}}</li>
+        <li>Signature abilities: {{abilities | slice: 0:-2}}</li>
+      </ul>
+    </mat-grid-tile>
+    <mat-grid-tile class="main-grid-style">
+      <ul>
+        <li>Double damage to: {{double_dmg_to | slice: 0:-2}}</li>
+        <li>Double damage from: {{double_dmg_from | slice: 0:-2}}</li>
+        <li>Half damage to: {{half_dmg_to | slice: 0:-2}}</li>
+        <li>Half damage from: {{half_dmg_from | slice: 0:-2}}</li>
+        <li>No damage from: {{no_dmg_from | slice: 0:-2}}</li>
+        <li>No damage to: {{no_dmg_to | slice: 0:-2}}</li>
+      </ul>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button (click)="onClose()" class="dialog-button-style">Zatvori</button>
+</mat-dialog-actions>
+
